@@ -1,0 +1,67 @@
+/*  @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');*/
+body
+{
+    margin: 0;
+    padding: 0;
+}
+.card
+{
+    /* font-family: 'Josefin Sans', sans-serif; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 400px;
+    transform-style: 600px;
+    transition: 0.5s;
+}
+.card .front
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    transition: 0.5s;
+}
+.card:hover .front
+{
+    transform: rotateX(-180deg);
+}
+.card .back
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    transition: 0.5s;
+}
+.card:hover .back
+{
+    transform: rotateX(0deg);
+}
+.card .back .details
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.card .back .details h2
+{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #fff;
+}
